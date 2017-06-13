@@ -1,5 +1,5 @@
 var canvas = document.getElementById(canvas)
 var ctx = canvas.getContext("2d")
 
-canvas.width = 100%
+canvas.width = 60%
 canvas.height = 100%
