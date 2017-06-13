@@ -4,4 +4,6 @@
 	display: block; 
 	float:center;
 	cursor:pointer;
+	width: 100%;
+	height: 100%;
 }
