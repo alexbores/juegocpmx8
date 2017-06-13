@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Marcianito Ware</title>
+	<title>Marcianito AlienWare</title>
 	<style type="text/css" media="screen">
 
 	</style>
@@ -21,11 +21,18 @@
 	var ctx = canvas.getContext("2d");
 
 
-
-ctx.rect(0, 0, canvas.width, canvas.height)
-ctx.fillstyle = "black";
-ctx.fill()
-
+ 	ctx.beginPath();
+    ctx.rect(0,0,canvas.width,canvas.height);
+    ctx.fillStyle = "black";
+    ctx.fill();
+    ctx.closePath();  
+    
+    ctx.beginPath();
+    ctx.font = "20px Comic Sans";
+    ctx.fillStyle = "Green";
+    ctx.fontWeight="100px";
+    ctx.fillText("Marcianito by AlienWare", canvas.width/7, canvas.height/4);
+    ctx.closePath();
 
 </script>
 </body>
