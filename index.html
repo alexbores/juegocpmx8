@@ -5,6 +5,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Marcianito Ware</title>
 	<link rel="stylesheet" href="styles.css">
+	<<script src="main.js" type="text/javascript" charset="utf-8" ></script>
+
+
 </head>
 
 
@@ -13,25 +16,5 @@
 <canvas id="canvas">
 </canvas>	
 
-
-<script type="text/javascript" charset="utf-8" async defer>
-
-
-//se define la variable "animationFrame" la cual se encarga de llamar a una funcion 60 veces por segundo
-(function() {
-    var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
-    window.requestAnimationFrame = requestAnimationFrame;
-})();
-
-//se asigna la etiqueta "canvas" a una variable en javascript
-var canvas = document.getElementById("canvas"),
-    ctx = canvas.getContext("2d"); //se asigna a "ctx" (contexto) la referencia para trabajar en un grafico 2d
-
-
-//tamaño del canvas
-canvas.width = 960;
-canvas.height = 520;
-
-</script>
 </body>
 </html>
