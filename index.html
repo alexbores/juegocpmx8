@@ -68,11 +68,13 @@ document.addEventListener("keyup", function(e) {
 function KeyHandler(){
 
     if(key[32]==true){
-        if(started==false){
-
-            started==true;
+        started = true;
         }
-    }
+        else {
+
+            started = false;
+        }
+    
 
 return 0;
 }
@@ -85,11 +87,12 @@ function main(){
     StartDisplay();
     KeyHandler();
 
-    if(started == true){
-      alert("presionó space");
 
+if(started == true){
+      console.log('presionó space')
 
     }
+
 
 
     requestAnimationFrame(main);
