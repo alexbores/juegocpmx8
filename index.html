@@ -27,7 +27,7 @@
 	var canvas = document.getElementById("canvas");
 	var ctx = canvas.getContext("2d");
 
-
+function StartDisplay(){
  	ctx.beginPath();
     ctx.rect(0,0,canvas.width,canvas.height);
     ctx.fillStyle = "black";
@@ -40,6 +40,29 @@
     ctx.fontWeight="100px";
     ctx.fillText("Marcianito by AlienWare", canvas.width/7, canvas.height/4);
     ctx.closePath();
+
+return 0;
+}
+
+
+function main(){
+ctx.clearRect(0,0,canvas.width,canvas.height);
+
+    StartDisplay();
+
+
+
+
+}
+
+
+
+window.addEventListener("load",function(){
+    main();
+});
+
+
+
 
 </script>
 </body>
