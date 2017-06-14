@@ -65,16 +65,16 @@ document.addEventListener("keyup", function(e) {
 });
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+var keyBlocker = false;
 function KeyHandler(){
-
-    if(key[32]==true){
-        started = true;
-        }
-        else {
-
-            started = false;
-        }
-    
+    if(key[32] == true && keyBlocker == false){
+      started = true;
+      keyBlocker = true;
+    }
+    else if(key[32] == false && keyBlocker == true){
+      started = false;
+      keyBlocker = false;
+    }
 
 return 0;
 }
@@ -88,9 +88,9 @@ function main(){
     KeyHandler();
 
 
-if(started == true){
+   if(started == true){
       console.log('presionó space')
-
+      started = false;
     }
 
 
