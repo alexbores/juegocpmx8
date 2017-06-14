@@ -37,22 +37,62 @@ function StartDisplay(){
     ctx.beginPath();
     ctx.font = "20px Comic Sans";
     ctx.fillStyle = "Green";
-    ctx.fontWeight="100px";
-    ctx.fillText("Ya quiéreme Xime<3", canvas.width/7, canvas.height/4);
+    ctx.fontWeight="10000vw";
+    ctx.fillText("Marcianito by AlienWare", canvas.width/7, canvas.height/4);
     ctx.closePath();
 
 return 0;
 }
 
 
+var started = false;
+
+
+//////////////////////////////////Se agregan los listeners del keyboard///////////////////////////////////////////////////////////////////////
+var key = [];
+function setKeys(status){
+  for(var i = 0; i<300; i++){
+    key[i]=status;
+  }
+}
+setKeys[false];
+document.addEventListener("keydown", function(e) {
+    key[e.keyCode] = true;
+    console.log("down: "+e.keyCode);
+});
+document.addEventListener("keyup", function(e) {
+    key[e.keyCode] = false;
+});
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+function KeyHandler(){
+
+    if(key[32]==true){
+        if(started==false){
+
+            started==true;
+        }
+    }
+
+return 0;
+}
+
+
+
+
 function main(){
-ctx.clearRect(0,0,canvas.width,canvas.height);
-
+    ctx.clearRect(0,0,canvas.width,canvas.height);    
     StartDisplay();
+    KeyHandler();
+
+    if(started == true){
+      alert("presionó space");
 
 
+    }
 
 
+    requestAnimationFrame(main);
 }
 
 
