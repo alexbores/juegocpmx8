@@ -16,6 +16,13 @@
 </canvas>	
 
 <script type="text/javascript">
+
+
+
+(function() {
+    var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+    window.requestAnimationFrame = requestAnimationFrame;
+})();
 	
 	var canvas = document.getElementById("canvas");
 	var ctx = canvas.getContext("2d");
